@@ -1,3 +1,10 @@
+import Navigation from '../Navigation/Navigation';
+import './Profile.css';
+
 export default function Profile() {
-  return <h1>Hellow</h1>;
+  return (
+    <div className='container'>
+      <Navigation />
+    </div>
+  );
 }

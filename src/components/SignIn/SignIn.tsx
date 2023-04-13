@@ -77,7 +77,9 @@ export default function SignIn() {
             )}
           </div>
         </div>
-        {unsuccessfulLogin && <span>Неправильный логин или пароль</span>}
+        <span className='form__error'>
+          {unsuccessfulLogin && 'Неправильный логин или пароль'}
+        </span>
         <button type='submit' className='form__submit-btn'>
           SIGN IN
         </button>

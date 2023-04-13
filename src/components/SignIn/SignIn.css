@@ -56,6 +56,12 @@
   right: 24px;
 }
 
+.form__error {
+  font: 400 20px/20px 'Roboto', sans-serif;
+  height: 20px;
+  margin-top: 10px;
+}
+
 .form__submit-btn {
   font: 500 24px/33px 'Poppins', sans-serif;
   box-sizing: border-box;
