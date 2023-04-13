@@ -1,0 +1,74 @@
+.content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting {
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  margin-top: 156px;
+  text-align: center;
+  font: 400 36px/51.12px 'Poppins', sans-serif;
+}
+
+.form {
+  display: flex;
+  margin-top: 13px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.form__input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form__input-label {
+  font: 700 26px/30px 'Roboto Condensed', sans-serif;
+}
+
+.form__input {
+  box-sizing: border-box;
+  margin-top: 11px;
+  width: 580px;
+  height: 76px;
+  font: 500 24px/28.13px 'Roboto', sans-serif;
+  padding: 24px;
+}
+
+.form__show-password {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 68px;
+  right: 24px;
+}
+
+.form__submit-btn {
+  font: 500 24px/33px 'Poppins', sans-serif;
+  box-sizing: border-box;
+  width: 180px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  margin-top: 47px;
+}
+
+.form__submit-btn:hover {
+  opacity: 0.7;
+}

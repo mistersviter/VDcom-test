@@ -1,8 +1,11 @@
 # VDcom-test
 
-# Getting Started with Create React App
+### Аккаунты
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`login: Petrov@gmail.com
+password: 123`
+`login: Ivanov@gmail.com
+password: 123`
 
 ## Available Scripts
 
