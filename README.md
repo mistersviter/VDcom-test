@@ -7,6 +7,10 @@ password: 123`
 `login: Ivanov@gmail.com
 password: 123`
 
+### Ссылка на деплой
+
+[Посмотреть деплой](https://golden-zuccutto-d1416b.netlify.app)
+
 ## Available Scripts
 
 In the project directory, you can run:
