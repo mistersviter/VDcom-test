@@ -1,0 +1,51 @@
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  grid-area: profile-content;
+  padding: 23px 22px 29px 22px;
+  max-width: 1694px;
+}
+
+.profile-content__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-content__add-btn {
+  box-sizing: border-box;
+  width: 141px;
+  height: 40px;
+  background-color: #edbc4a;
+  border: none;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 10px;
+  color: rgba(256, 256, 256, 0.8);
+  font: 400 20px/30px 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.profile-content__add-btn:hover {
+  opacity: 0.7;
+}
+
+.profile-content__caption {
+  margin: 0;
+  padding: 0;
+  font: 400 32px/48px 'Poppins', sans-serif;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.cell-wrapper {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pagination {
+  margin-left: auto;
+}

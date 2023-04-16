@@ -18,4 +18,5 @@ export interface ICurrentUser {
   position: string | null;
   avatar: string | null;
   contacts: IContact[] | null;
+  filteredContacts?: IContact[] | null;
 }

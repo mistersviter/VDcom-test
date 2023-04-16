@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../hooks/hooks';
-import { login } from '../../slices/userSlice';
+import { filterContacts, login } from '../../slices/userSlice';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import Logo from '../Logo/Logo';
 import './SignIn.css';
@@ -38,7 +38,9 @@ export default function SignIn() {
         setUnsuccessfulLogin(true);
       } else {
         setUnsuccessfulLogin(false);
-        dispatch(login(userData));
+        const data = dispatch(login(userData));
+        const userContacts = data.payload.contacts;
+        dispatch(filterContacts(userContacts!));
         navigate('/');
       }
     } else {

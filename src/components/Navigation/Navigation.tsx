@@ -9,7 +9,15 @@ import {
 } from 'react-icons/md';
 import './Navigation.css';
 
-export default function Navigation() {
+interface INavigationProps {
+  activePage: string;
+  setActivePage: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function Navigation({
+  activePage,
+  setActivePage,
+}: INavigationProps) {
   const dispatch = useAppDispatch();
   return (
     <div className='navigation'>
@@ -18,20 +26,35 @@ export default function Navigation() {
         <nav className='navigation-menu'>
           <ul className='navigation-menu__list'>
             <li className='navigation-menu__item'>
-              <button className='navigation-menu__button navigation-menu__button_active'>
-                <MdOutlineContacts />
+              <button
+                className={`navigation-menu__button ${
+                  activePage === 'contacts' && 'navigation-menu__button_active'
+                }`}
+                onClick={() => setActivePage('contacts')}
+              >
+                <MdOutlineContacts className='navigation-menu__icon' />
                 Total Contacts
               </button>
             </li>
             <li className='navigation-menu__item'>
-              <button className='navigation-menu__button'>
-                <MdOutlineDateRange />
+              <button
+                className={`navigation-menu__button ${
+                  activePage === 'calendar' && 'navigation-menu__button_active'
+                }`}
+                onClick={() => setActivePage('calendar')}
+              >
+                <MdOutlineDateRange className='navigation-menu__icon' />
                 Calendar
               </button>
             </li>
             <li className='navigation-menu__item'>
-              <button className='navigation-menu__button'>
-                <MdOutlineDataSaverOff />
+              <button
+                className={`navigation-menu__button ${
+                  activePage === 'report' && 'navigation-menu__button_active'
+                }`}
+                onClick={() => setActivePage('report')}
+              >
+                <MdOutlineDataSaverOff className='navigation-menu__icon' />
                 Project Report
               </button>
             </li>
@@ -40,7 +63,7 @@ export default function Navigation() {
       </div>
       <div className='logout'>
         <button className='logout-btn' onClick={() => dispatch(logout())}>
-          <MdOutlineLogout />
+          <MdOutlineLogout className='logout-btn__icon' />
           Log out
         </button>
       </div>

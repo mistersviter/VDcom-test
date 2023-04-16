@@ -1,0 +1,25 @@
+.user-info {
+  display: flex;
+  height: 70px;
+  width: 245px;
+  margin-left: auto;
+  gap: 14px;
+}
+
+.user-info__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info__name {
+  display: flex;
+  font: 400 22px/33px 'Poppins', sans-serif;
+  opacity: 0.8;
+}
+
+.user-info__position {
+  display: flex;
+  font: 400 13px/20px 'Titillium Web', sans-serif;
+  opacity: 0.7;
+}

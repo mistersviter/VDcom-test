@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../store/store';
-import { ICurrentUser } from '../interfaces/currentUserInterFace';
+import { IContact, ICurrentUser } from '../interfaces/currentUserInterFace';
 
 const initialState: ICurrentUser = {
   isLoggedIn: false,
@@ -10,7 +10,8 @@ const initialState: ICurrentUser = {
   name: null,
   position: null,
   avatar: null,
-  contacts: null,
+  contacts: [],
+  filteredContacts: [],
 };
 
 export const userSlice = createSlice({
@@ -23,10 +24,13 @@ export const userSlice = createSlice({
     logout: (state) => {
       return initialState;
     },
+    filterContacts: (state, action: PayloadAction<IContact[]>) => {
+      state.filteredContacts = [...action.payload];
+    },
   },
 });
 
-export const { login, logout } = userSlice.actions;
+export const { login, logout, filterContacts } = userSlice.actions;
 
 export const selectUserAuth = (state: RootState) => state.user.isLoggedIn;
 

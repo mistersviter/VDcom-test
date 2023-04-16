@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   width: 226px;
+  grid-area: navigation;
 }
 
 .navigation__layout {
@@ -11,14 +12,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 48px;
   background-color: #fff;
   flex-grow: 1;
 }
 
 .navigation-menu {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 36px;
 }
 
 .navigation-menu__list {
@@ -53,7 +54,6 @@
   margin: 0;
   padding-left: 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .navigation-menu__button:hover {
@@ -63,6 +63,10 @@
 .navigation-menu__button_active {
   border-left: 5px solid #edbc4a;
   background: rgba(237, 188, 74, 0.2);
+}
+
+.navigation-menu__icon {
+  font-size: 36px;
 }
 
 .logout {
@@ -95,4 +99,8 @@
 
 .logout-btn:hover {
   opacity: 0.5;
+}
+
+.logout-btn__icon {
+  font-size: 32px;
 }
